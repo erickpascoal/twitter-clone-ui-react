@@ -7,8 +7,8 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   padding: 1rem;
-  border-right: 1.5px solid ${({ theme }) => theme.colors.tertiary};
-  border-left: 1.5px solid ${({ theme }) => theme.colors.tertiary};
+  border-right: 1px solid ${({ theme }) => theme.colors.borderColor};
+  border-left: 1px solid ${({ theme }) => theme.colors.borderColor};
 
   h1 {
     font-size: 1.25rem;
@@ -17,7 +17,7 @@ export const Header = styled.div`
 
 export const ContainerCreatorPosts = styled.div`
   padding: 0.5rem 1rem;
-  border: 1.5px solid ${({ theme }) => theme.colors.tertiary};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 
   display: flex;
 
@@ -75,7 +75,7 @@ export const FormStyled = styled.form`
 export const ContainerSubmit = styled.div`
   width: 100%;
   margin-top: 0.5rem;
-  border-top: 1.5px solid ${({ theme }) => theme.colors.tertiary};
+  border-top: 1.5px solid ${({ theme }) => theme.colors.borderColor};
   padding-top: 1rem;
 
   display: flex;
@@ -99,21 +99,15 @@ export const ContainerSubmit = styled.div`
 export const ListOptionPost = styled.ul`
   display: flex;
 
-  li button {
-    padding: 0.5rem;
-    width: 2.3rem;
-    height: 2.3rem;
-    border-radius: 50%;
-
-    transition: background-color 0.22s;
-
-    &:hover {
-      background-color: ${transparentize(0.8, "#1da1f2")};
-    }
-  }
-
   li button svg {
     font-size: 1.4rem;
     fill: ${({ theme }) => theme.colors.secondary};
   }
+`;
+
+export const Separator = styled.div`
+  height: 0.62rem;
+  background-color: #15181c;
+  border: solid 1px ${({ theme }) => theme.colors.borderColor};
+  border-top: 0;
 `;

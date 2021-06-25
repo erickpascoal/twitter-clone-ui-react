@@ -4,6 +4,9 @@ export const darkTheme = {
     secondary: "#1da1f2",
     tertiary: "#15181c",
 
+    quaternary: "#6e767d",
+
     fontColor: "#d9d9d9",
+    borderColor: "#2f3336",
   },
 };
