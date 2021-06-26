@@ -1,28 +1,47 @@
 import { transparentize } from "polished";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const ButtonStyled = styled.button`
-  padding: 0.5rem;
-  width: 2.3rem;
-  height: 2.3rem;
-  border-radius: 50%;
+interface ContainerProps {
+  color: string;
+}
 
+export const Container = styled.button<ContainerProps>`
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  transition: all 0.3s;
+  .circle {
+    width: 2.12rem;
+    height: 2.12rem;
+    border-radius: 50%;
 
-  svg {
-    fill: ${({ theme }) => theme.colors.quaternary};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: ${({ theme }) => theme.colors.quaternary};
+    margin-left: 0.3rem;
   }
 
   &:hover {
-    background-color: ${transparentize(0.8, "#1da1f2")};
+    .circle {
+      ${({ color }) =>
+        css`
+          background-color: ${transparentize(0.8, color)};
+        `}
 
-    svg {
-      transition: all 0.3s;
-      fill: #1da1f2;
+      svg {
+        transition: all 0.3s;
+        fill: ${({ color }) => color};
+      }
+    }
+
+    p {
+      color: ${({ color }) => color};
     }
   }
 `;

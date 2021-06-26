@@ -12,6 +12,7 @@ export const Header = styled.div`
 
   h1 {
     font-size: 1.25rem;
+    font-weight: 800;
   }
 `;
 
@@ -51,7 +52,7 @@ export const FormStyled = styled.form`
     min-height: 2rem;
     border-radius: 1rem;
     max-width: 17rem;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.87rem;
 
     transition: all 0.2s;
@@ -91,7 +92,7 @@ export const ContainerSubmit = styled.div`
     line-height: 1.25rem;
 
     font-size: 0.93rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
   }
 `;

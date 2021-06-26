@@ -8,5 +8,8 @@ export const darkTheme = {
 
     fontColor: "#d9d9d9",
     borderColor: "#2f3336",
+
+    sharingColor: "#17bf63",
+    likeColor: "#e0245e",
   },
 };

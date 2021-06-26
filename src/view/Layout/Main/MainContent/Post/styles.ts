@@ -1,12 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { lighten } from "polished";
+import { ButtonCircle } from "view/components/ButtonCircle";
 
 export const Container = styled.div`
-  padding: 0.5rem 0.5rem 1rem 1rem;
+  padding: 0.8rem 0.5rem 0.4rem 1rem;
   border: solid 1px ${({ theme }) => theme.colors.borderColor};
+  background-color: ${({ theme }) => theme.colors.primary};
   border-top: 0;
   cursor: pointer;
 
   display: flex;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    ${({ theme }) => css`
+      background-color: ${lighten(0.03, theme.colors.primary)};
+    `};
+  }
 
   .user-img {
     width: 3rem;
@@ -28,16 +39,33 @@ export const ContainerAuthor = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 0.15rem;
+
+  position: relative;
 
   div {
     margin-top: 0.5rem;
   }
 `;
 
+export const ButtonActionEllipsis = styled(ButtonCircle)`
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.quaternary};
+  }
+`;
+
+export const AuthorName = styled.span`
+  font-weight: 700;
+`;
+
 export const AuthorIdentifier = styled.span`
   position: relative;
   color: ${({ theme }) => theme.colors.quaternary};
-  margin: 0 1rem 0 0.5rem;
+  margin: 0 0.8rem 0 0.2rem;
 
   &::after {
     position: absolute;
@@ -46,7 +74,7 @@ export const AuthorIdentifier = styled.span`
     width: 2px;
     height: 2px;
     top: 55%;
-    right: -0.6rem;
+    right: -0.5rem;
   }
 `;
 
@@ -70,5 +98,20 @@ export const ContainerPostImage = styled.div`
   img {
     max-width: 31.6rem;
     min-height: 18.5rem;
+  }
+`;
+
+export const ActionsPost = styled.div`
+  margin-top: 0.5rem;
+  margin-left: -0.4rem;
+  max-width: 26.56rem;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ButtonActionPost = styled(ButtonCircle)`
+  svg {
+    fill: ${({ theme }) => theme.colors.quaternary};
   }
 `;

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
 	* {
 		padding: 0;
 		margin: 0;
@@ -30,6 +31,6 @@ export const GlobalStyle = createGlobalStyle`
 
 
 	* {
-		font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font: 15px  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	}
 `;
