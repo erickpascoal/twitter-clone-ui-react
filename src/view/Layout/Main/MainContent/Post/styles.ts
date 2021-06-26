@@ -4,6 +4,7 @@ export const Container = styled.div`
   padding: 0.5rem 0.5rem 1rem 1rem;
   border: solid 1px ${({ theme }) => theme.colors.borderColor};
   border-top: 0;
+  cursor: pointer;
 
   display: flex;
 
@@ -51,4 +52,23 @@ export const AuthorIdentifier = styled.span`
 
 export const PostTime = styled.span`
   color: ${({ theme }) => theme.colors.quaternary};
+`;
+
+export const PostContent = styled.span`
+  padding-right: 0.5rem;
+`;
+
+export const ContainerPostImage = styled.div`
+  margin-top: 1rem;
+  max-height: 18.5rem;
+  position: relative;
+  border-radius: 1rem;
+  border: solid 1px ${({ theme }) => theme.colors.borderColor};
+
+  overflow: hidden;
+
+  img {
+    max-width: 31.6rem;
+    min-height: 18.5rem;
+  }
 `;

@@ -4,11 +4,18 @@ import {
   ContainerAuthor,
   AuthorIdentifier,
   PostTime,
+  PostContent,
+  ContainerPostImage,
 } from "./styles";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 import { ButtonCircle } from "view/components/ButtonCircle";
 
-export function Post() {
+interface PostProps {
+  imageUrl: string;
+  text: string;
+}
+
+export function Post({ text, imageUrl }: PostProps) {
   return (
     <Container>
       <img
@@ -29,12 +36,13 @@ export function Post() {
             <IoEllipsisHorizontalSharp />
           </ButtonCircle>
         </ContainerAuthor>
-        <div>
-          Equipped with high-definition cameras, @Astro_Kimbrough & @Thom_Astro
-          will venture outside the @Space_Station to continue installing new,
-          roll-up solar arrays. Calendário Don’t miss the action tomorrow, June
-          25. Watch LIVE at 6:30am ET (10:30 UT): http://nasa.gov/live
-        </div>
+
+        <PostContent>
+          {text}
+          <ContainerPostImage>
+            <img src={imageUrl} alt="imagem do post" />
+          </ContainerPostImage>
+        </PostContent>
       </PostInfo>
     </Container>
   );
