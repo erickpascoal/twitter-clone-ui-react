@@ -31,7 +31,7 @@ export const Container = styled.button<ContainerProps>`
     .circle {
       ${({ color }) =>
         css`
-          background-color: ${transparentize(0.8, color)};
+          background-color: ${transparentize(0.9, color)};
         `}
 
       svg {

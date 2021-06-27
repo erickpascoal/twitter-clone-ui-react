@@ -31,6 +31,6 @@ export const GlobalStyle = createGlobalStyle`
 
 
 	* {
-		font: 15px  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font: 16px  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	}
 `;

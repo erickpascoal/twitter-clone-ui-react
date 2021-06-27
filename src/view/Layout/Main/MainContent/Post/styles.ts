@@ -3,7 +3,7 @@ import { lighten } from "polished";
 import { ButtonCircle } from "view/components/ButtonCircle";
 
 export const Container = styled.div`
-  padding: 0.8rem 0.5rem 0.4rem 1rem;
+  padding: 0.9rem 0.5rem 0.4rem 1rem;
   border: solid 1px ${({ theme }) => theme.colors.borderColor};
   background-color: ${({ theme }) => theme.colors.primary};
   border-top: 0;
@@ -42,10 +42,6 @@ export const ContainerAuthor = styled.div`
   margin-bottom: 0.15rem;
 
   position: relative;
-
-  div {
-    margin-top: 0.5rem;
-  }
 `;
 
 export const ButtonActionEllipsis = styled(ButtonCircle)`
@@ -84,6 +80,11 @@ export const PostTime = styled.span`
 
 export const PostContent = styled.span`
   padding-right: 0.5rem;
+
+  > p {
+    color: ${({ theme }) => theme.colors.fontColor};
+    font-size: 0.93rem;
+  }
 `;
 
 export const ContainerPostImage = styled.div`
@@ -102,7 +103,7 @@ export const ContainerPostImage = styled.div`
 `;
 
 export const ActionsPost = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   margin-left: -0.4rem;
   max-width: 26.56rem;
 

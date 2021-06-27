@@ -62,7 +62,7 @@ export const FormStyled = styled.form`
     justify-content: center;
 
     &:hover {
-      background-color: ${transparentize(0.8, "#1da1f2")};
+      background-color: ${transparentize(0.9, "#1da1f2")};
     }
 
     svg {
@@ -81,20 +81,6 @@ export const ContainerSubmit = styled.div`
 
   display: flex;
   justify-content: space-between;
-
-  .button-submit {
-    height: 2.37rem;
-    min-width: 2.5rem;
-    padding: 0 1rem;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    opacity: 0.5;
-    border-radius: 1.5rem;
-    line-height: 1.25rem;
-
-    font-size: 0.93rem;
-    font-weight: 700;
-    color: #fff;
-  }
 `;
 
 export const ListOptionPost = styled.ul`

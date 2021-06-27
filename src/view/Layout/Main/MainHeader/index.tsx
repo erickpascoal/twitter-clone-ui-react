@@ -14,6 +14,7 @@ import { AiOutlineFileGif, AiOutlineCalendar } from "react-icons/ai";
 import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { VscSmiley } from "react-icons/vsc";
 import { ButtonCircle } from "view/components/ButtonCircle";
+import { Button } from "view/components/Button";
 
 export function MainHeader() {
   return (
@@ -65,9 +66,7 @@ export function MainHeader() {
               </li>
             </ListOptionPost>
 
-            <button className="button-submit" type="button">
-              Tweetar
-            </button>
+            <Button type="button"> Tweetar </Button>
           </ContainerSubmit>
         </FormStyled>
       </ContainerCreatorPosts>

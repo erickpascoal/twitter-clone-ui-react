@@ -3,6 +3,7 @@ import { transparentize } from "polished";
 
 export const Container = styled.div`
   width: 100%;
+  max-width: 1000px;
 `;
 
 export const Header = styled.div`
@@ -61,7 +62,7 @@ export const FormStyled = styled.form`
     justify-content: center;
 
     &:hover {
-      background-color: ${transparentize(0.8, "#1da1f2")};
+      background-color: ${transparentize(0.9, "#1da1f2")};
     }
 
     svg {
@@ -108,7 +109,7 @@ export const ListOptionPost = styled.ul`
     transition: background-color 0.22s;
 
     &:hover {
-      background-color: ${transparentize(0.8, "#1da1f2")};
+      background-color: ${transparentize(0.9, "#1da1f2")};
     }
   }
 
