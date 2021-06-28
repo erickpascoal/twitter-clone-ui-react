@@ -8,6 +8,14 @@ export const Container = styled.div`
   position: relative;
   max-height: 100vh;
 
+  .wrapper {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 17.18rem;
+  }
+
   ul {
     margin-bottom: 1rem;
   }

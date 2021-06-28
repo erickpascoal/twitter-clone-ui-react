@@ -15,83 +15,85 @@ import { ButtonUser } from "./ButtonUser";
 export function AsideLeft() {
   return (
     <Container>
-      <ul>
-        <MenuItem>
-          <ButtonMenu>
-            <IconTwitter />
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem active={true}>
-          <ButtonMenu>
-            <div>
-              <IconHome />
-              <strong>Página Inicial</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconHash />
-              <strong>Explorar</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconBell />
-              <strong>Notificações</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconEnvelope />
-              <strong>Mensagens</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconBookMark />
-              <strong>Itens salvos</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconList />
-              <strong>Listas</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconUser />
-              <strong>Perfil</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-        <MenuItem>
-          <ButtonMenu>
-            <div>
-              <IconEllipsis />
-              <strong>Mais</strong>
-            </div>
-          </ButtonMenu>
-        </MenuItem>
-      </ul>
+      <div className="wrapper">
+        <ul>
+          <MenuItem>
+            <ButtonMenu>
+              <IconTwitter />
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem active={true}>
+            <ButtonMenu>
+              <div>
+                <IconHome />
+                <strong>Página Inicial</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconHash />
+                <strong>Explorar</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconBell />
+                <strong>Notificações</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconEnvelope />
+                <strong>Mensagens</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconBookMark />
+                <strong>Itens salvos</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconList />
+                <strong>Listas</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconUser />
+                <strong>Perfil</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+          <MenuItem>
+            <ButtonMenu>
+              <div>
+                <IconEllipsis />
+                <strong>Mais</strong>
+              </div>
+            </ButtonMenu>
+          </MenuItem>
+        </ul>
 
-      <Button width="14.06rem" height="2.87rem" type="button">
-        Tweetar
-      </Button>
+        <Button width="14.06rem" height="2.87rem" type="button">
+          Tweetar
+        </Button>
 
-      <ButtonUser />
+        <ButtonUser />
+      </div>
     </Container>
   );
 }
