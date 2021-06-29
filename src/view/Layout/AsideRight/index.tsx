@@ -1,5 +1,10 @@
+import { InputSearch } from "./InputSearch";
 import { Container } from "./styles";
 
 export function AsideRight() {
-  return <Container>AsideRight</Container>;
+  return (
+    <Container>
+      <InputSearch />
+    </Container>
+  );
 }
