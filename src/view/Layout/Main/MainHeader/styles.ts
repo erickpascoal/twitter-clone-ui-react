@@ -94,7 +94,8 @@ export const ListOptionPost = styled.ul`
 
 export const Separator = styled.div`
   height: 0.62rem;
-  background-color: #15181c;
+  background-color: ${({ theme }) => theme.colors.tertiary};
+
   border: solid 1px ${({ theme }) => theme.colors.borderColor};
   border-top: 0;
 `;
