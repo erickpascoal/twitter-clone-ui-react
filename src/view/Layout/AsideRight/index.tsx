@@ -1,12 +1,16 @@
+import { FollowTopicsPanel } from "./FollowTopicsPanel";
+import { FollowUsersPanel } from "./FollowUsersPanel";
 import { InputSearch } from "./InputSearch";
-import { LatestNews } from "./LatestNews";
+import { LatestNewsPanel } from "./LatestNewsPanel";
 import { Container } from "./styles";
 
 export function AsideRight() {
   return (
     <Container>
       <InputSearch />
-      <LatestNews />
+      <LatestNewsPanel />
+      <FollowUsersPanel />
+      <FollowTopicsPanel />
     </Container>
   );
 }

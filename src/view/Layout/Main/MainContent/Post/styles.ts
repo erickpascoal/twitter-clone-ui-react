@@ -97,7 +97,7 @@ export const ContainerPostImage = styled.div`
   overflow: hidden;
 
   img {
-    max-width: 31.6rem;
+    max-width: 33.6rem;
     min-height: 18.5rem;
   }
 `;

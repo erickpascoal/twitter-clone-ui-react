@@ -38,9 +38,9 @@ export const BoxItem = styled.li`
   }
 `;
 
-export const BoxFooter = styled.button`
+export const BoxFooter = styled.a`
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   border-radius: 0 0 1rem 1rem;
   background-color: ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.secondary};

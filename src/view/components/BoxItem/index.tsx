@@ -1,31 +1,30 @@
+import { ReactNode } from "react";
 import { BoxFooter, BoxHeader, BoxItem, Container } from "./styles";
 
-export function Box() {
+interface BoxProps {
+  title: string;
+  items: ReactNode[];
+  showMoreLink: string;
+}
+
+export function Box({ title, items, showMoreLink }: BoxProps) {
   return (
     <Container>
       <BoxHeader>
-        <h1>O que está acontecendo</h1>
+        <h1>{title}</h1>
       </BoxHeader>
 
       <ul>
-        <BoxItem>
-          <button>
-            Governo Bolsonaro decide suspender contrato da Covaxin após
-            suspeitas de irregularidades
-          </button>
-        </BoxItem>
-        <BoxItem>
-          <button>Parabéns Kim</button>
-        </BoxItem>
-        <BoxItem>
-          <button>Luba</button>
-        </BoxItem>
-        <BoxItem>
-          <button>ADULTO DE CHUPETA</button>
-        </BoxItem>
+        {items.map((item) => (
+          <BoxItem>
+            <button>{item}</button>
+          </BoxItem>
+        ))}
       </ul>
 
-      <BoxFooter>Mostrar mais</BoxFooter>
+      <BoxFooter target="blank" href={showMoreLink}>
+        Mostrar mais
+      </BoxFooter>
     </Container>
   );
 }
