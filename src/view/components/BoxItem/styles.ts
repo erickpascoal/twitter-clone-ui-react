@@ -30,7 +30,7 @@ export const BoxItem = styled.li`
     `};
   }
 
-  button {
+  > button {
     padding: 0.75rem 1rem;
     width: 100%;
     height: 100%;

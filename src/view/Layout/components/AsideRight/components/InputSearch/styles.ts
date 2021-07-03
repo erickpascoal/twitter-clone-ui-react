@@ -18,6 +18,7 @@ export const Container = styled.div<ContainerProps>`
     !!isFocus ? variantInput.isFocused : variantInput.default};
 
   input {
+    width: 100%;
     padding: 0.75rem 0.85rem;
     background-color: transparent;
     border: 0;

@@ -1,6 +1,12 @@
-import { ContaineInfo, Container, ContainerImage } from "./styles";
+import {
+  ButtonActionEllipsis,
+  ContaineInfo,
+  Container,
+  ContainerImage,
+} from "./styles";
+import { IoEllipsisHorizontalSharp as IconEllipsis } from "react-icons/io5";
 
-export interface NewsCardProps {
+export interface LatestNewsCardProps {
   preTitle: string;
   time: string;
   title: string;
@@ -9,19 +15,23 @@ export interface NewsCardProps {
   countTweets?: string;
 }
 
-export function NewsCard({
+export function LatestNewsCard({
   preTitle,
   time,
   title,
   urlImage,
   description,
   countTweets,
-}: NewsCardProps) {
+}: LatestNewsCardProps) {
   return (
     <Container>
       <ContaineInfo>
         <p>
-          {preTitle} . {time}
+          {preTitle}
+
+          {!!time && <> . </>}
+
+          {time}
         </p>
 
         <strong>{title}</strong>
@@ -35,6 +45,12 @@ export function NewsCard({
         <ContainerImage>
           <img src={urlImage} alt="notícia" />
         </ContainerImage>
+      )}
+
+      {!urlImage && (
+        <ButtonActionEllipsis>
+          <IconEllipsis />
+        </ButtonActionEllipsis>
       )}
     </Container>
   );

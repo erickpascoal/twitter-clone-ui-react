@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { ButtonCircle } from "view/components/ButtonCircle";
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
 `;
 
 export const ContaineInfo = styled.div`
@@ -23,13 +25,14 @@ export const ContaineInfo = styled.div`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.fontColor};
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
   }
 `;
 
 export const ContainerImage = styled.div`
   max-width: 4.25rem;
   max-height: 4.25rem;
+  margin-left: 2rem;
   overflow: hidden;
   border-radius: 1rem;
   text-align: center;
@@ -39,5 +42,15 @@ export const ContainerImage = styled.div`
 
   img {
     width: 7.5rem;
+  }
+`;
+
+export const ButtonActionEllipsis = styled(ButtonCircle)`
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.quaternary};
   }
 `;
