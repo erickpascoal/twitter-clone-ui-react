@@ -1,4 +1,4 @@
-import { darken, transparentize } from "polished";
+import { transparentize } from "polished";
 import styled, { css } from "styled-components";
 import { ButtonOutLineProps } from ".";
 

@@ -1,5 +1,4 @@
-import { transparentize } from "polished";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ButtonOutLine } from "view/components/ButtonOutLine";
 
 export const Container = styled.div`
