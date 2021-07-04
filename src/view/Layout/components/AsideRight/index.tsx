@@ -3,16 +3,21 @@ import { FollowUsersPanel } from "./components//FollowUsersPanel";
 import { InputSearch } from "./components/InputSearch";
 import { LatestNewsPanel } from "./components/LatestNewsPanel";
 import { Terms } from "./components/Terms";
-import { Container } from "./styles";
+import { Container, ContainerStick } from "./styles";
+import ReactStickyBox from "react-sticky-box";
 
 export function AsideRight() {
   return (
     <Container>
-      <InputSearch />
-      <LatestNewsPanel />
-      <FollowUsersPanel />
-      <FollowTopicsPanel />
-      <Terms />
+      <ReactStickyBox>
+        <ContainerStick>
+          <InputSearch />
+          <LatestNewsPanel />
+          <FollowUsersPanel />
+          <FollowTopicsPanel />
+          <Terms />
+        </ContainerStick>
+      </ReactStickyBox>
     </Container>
   );
 }

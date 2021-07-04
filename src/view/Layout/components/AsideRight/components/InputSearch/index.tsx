@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, ContainerInput } from "./styles";
 
 import { BiSearch as IconSearch } from "react-icons/bi";
 import { InputHTMLAttributes } from "react";
@@ -10,15 +10,17 @@ export function InputSearch({ ...rest }: InputSearchProps) {
   const [isFocus, setIsFocus] = useState(false);
 
   return (
-    <Container isFocus={isFocus}>
-      <IconSearch />
-      <input
-        placeholder="Buscar no Twitter"
-        type="text"
-        onFocus={() => setIsFocus(true)}
-        onBlur={() => setIsFocus(false)}
-        {...rest}
-      />
+    <Container>
+      <ContainerInput isFocus={isFocus}>
+        <IconSearch />
+        <input
+          placeholder="Buscar no Twitter"
+          type="text"
+          onFocus={() => setIsFocus(true)}
+          onBlur={() => setIsFocus(false)}
+          {...rest}
+        />
+      </ContainerInput>
     </Container>
   );
 }
