@@ -2,11 +2,12 @@ import { transparentize } from "polished";
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  position: absolute;
-  bottom: 0;
   width: 100%;
   margin-bottom: 1rem;
-  padding-right: 24px;
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
 `;
 
 export const ButtonStyled = styled.button`
@@ -30,6 +31,20 @@ export const ButtonStyled = styled.button`
         background-color: ${transparentize(0.9, theme.colors.secondary)};
       `}
   }
+
+  @media (max-width: 1281px) {
+    justify-content: center;
+    align-items: center;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+
+    /* padding: 0.5rem; */
+
+    svg {
+      display: none;
+    }
+  }
 `;
 
 export const ContainerUserInfo = styled.div`
@@ -42,7 +57,6 @@ export const ContainerUserInfo = styled.div`
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    margin-right: 0.75rem;
   }
 
   div {
@@ -50,6 +64,7 @@ export const ContainerUserInfo = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-left: 0.75rem;
 
     strong {
       font-size: 0.93rem;
@@ -61,12 +76,13 @@ export const ContainerUserInfo = styled.div`
       font-size: 0.93rem;
       color: ${({ theme }) => theme.colors.quaternary};
     }
+  }
 
-    @media (max-width: 1281px) {
-      strong,
-      p {
-        display: none;
-      }
+  @media (max-width: 1281px) {
+    justify-content: center;
+
+    div {
+      display: none;
     }
   }
 `;

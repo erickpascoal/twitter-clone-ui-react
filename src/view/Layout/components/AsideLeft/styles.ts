@@ -11,13 +11,12 @@ export const Container = styled.div`
   position: relative;
   max-height: 100vh;
 
-  .wrapper {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 17.18rem;
-  }
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   ul {
     margin-bottom: 1rem;
@@ -25,9 +24,7 @@ export const Container = styled.div`
 
   @media (max-width: 1281px) {
     max-width: 4.5rem;
-    .wrapper {
-      max-width: 4.5rem;
-    }
+    padding: 0.2rem 2.7rem;
   }
 `;
 
@@ -69,7 +66,7 @@ export const ButtonMenu = styled.button`
   align-items: center;
   border-radius: 99999999rem;
   justify-content: center;
-  padding: 0.75rem 0.75rem 0.75rem 0;
+  padding: 0.75rem 0 0.75rem 0;
 
   transition: all 0.3s;
 
@@ -89,6 +86,7 @@ export const ButtonMenu = styled.button`
     font-size: 1.25rem;
     font-weight: 700;
     margin-left: 1.3rem;
+    margin-right: 0.75rem;
     color: ${({ theme }) => theme.colors.fontColor};
   }
 
@@ -133,11 +131,11 @@ export const ButtonStyled = styled(Button)`
   @media (max-width: 1281px) {
     width: 2.87rem;
 
-    strong {
+    > strong {
       display: none;
     }
 
-    svg {
+    > svg {
       display: flex;
     }
   }

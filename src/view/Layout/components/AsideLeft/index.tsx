@@ -14,86 +14,84 @@ import { ButtonUser } from "./ButtonUser";
 export function AsideLeft() {
   return (
     <Container>
-      <div className="wrapper">
-        <ul>
-          <MenuItem>
-            <ButtonMenu>
-              <IconTwitter />
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem active={true}>
-            <ButtonMenu>
-              <div>
-                <IconHome />
-                <strong>Página Inicial</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconHash />
-                <strong>Explorar</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconBell />
-                <strong>Notificações</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconEnvelope />
-                <strong>Mensagens</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconBookMark />
-                <strong>Itens salvos</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconList />
-                <strong>Listas</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconUser />
-                <strong>Perfil</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-          <MenuItem>
-            <ButtonMenu>
-              <div>
-                <IconEllipsis />
-                <strong>Mais</strong>
-              </div>
-            </ButtonMenu>
-          </MenuItem>
-        </ul>
+      <ul>
+        <MenuItem>
+          <ButtonMenu>
+            <IconTwitter />
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem active={true}>
+          <ButtonMenu>
+            <div>
+              <IconHome />
+              <strong>Página Inicial</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconHash />
+              <strong>Explorar</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconBell />
+              <strong>Notificações</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconEnvelope />
+              <strong>Mensagens</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconBookMark />
+              <strong>Itens salvos</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconList />
+              <strong>Listas</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconUser />
+              <strong>Perfil</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+        <MenuItem>
+          <ButtonMenu>
+            <div>
+              <IconEllipsis />
+              <strong>Mais</strong>
+            </div>
+          </ButtonMenu>
+        </MenuItem>
+      </ul>
 
-        <ButtonStyled type="button">
-          <strong>Tweetar</strong>
-          <IconUser />
-        </ButtonStyled>
+      <ButtonStyled type="button">
+        <strong>Tweetar</strong>
+        <IconUser />
+      </ButtonStyled>
 
-        <ButtonUser />
-      </div>
+      <ButtonUser />
     </Container>
   );
 }
