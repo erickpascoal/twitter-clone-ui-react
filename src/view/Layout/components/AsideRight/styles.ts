@@ -4,7 +4,6 @@ export const Container = styled.div`
   width: 100%;
   max-width: 21.75rem;
   margin-left: 1.5rem;
-  padding-top: 0.25rem;
 
   @media (max-width: 1095px) {
     max-width: 18rem;
@@ -16,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerStick = styled.div`
-  padding-top: 3.5rem;
+  padding-top: 3.8rem;
   padding-bottom: 7rem;
 
   display: flex;

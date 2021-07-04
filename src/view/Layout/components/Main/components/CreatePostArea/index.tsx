@@ -3,7 +3,6 @@ import {
   ContainerCreatorPosts,
   ContainerSubmit,
   FormStyled,
-  Header,
   ListOptionPost,
   Separator,
 } from "./styles";
@@ -16,13 +15,9 @@ import { VscSmiley } from "react-icons/vsc";
 import { ButtonCircle } from "view/components/ButtonCircle";
 import { Button } from "view/components/Button";
 
-export function MainHeader() {
+export function CreatePostArea() {
   return (
     <Container>
-      <Header>
-        <h1>Página Inicial</h1>
-      </Header>
-
       <ContainerCreatorPosts>
         <img
           className="avatar-img"

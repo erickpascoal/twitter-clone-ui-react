@@ -5,6 +5,7 @@ import { Button } from "view/components/Button";
 export const Container = styled.div`
   max-width: 17.18rem;
   width: 100%;
+  height: 100vh;
   min-width: 4.5rem;
   padding: 0.2rem 0.75rem;
   position: relative;

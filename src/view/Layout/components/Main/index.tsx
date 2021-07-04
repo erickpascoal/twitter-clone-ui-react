@@ -1,12 +1,14 @@
-import { MainContent } from "./components/MainContent";
-import { MainHeader } from "./components/MainHeader";
+import { Header } from "./components/Header";
+import { Content } from "./components/Content";
+import { CreatePostArea } from "./components/CreatePostArea";
 import { Container } from "./styles";
 
 export function Main() {
   return (
     <Container>
-      <MainHeader />
-      <MainContent />
+      <Header />
+      <CreatePostArea />
+      <Content />
     </Container>
   );
 }

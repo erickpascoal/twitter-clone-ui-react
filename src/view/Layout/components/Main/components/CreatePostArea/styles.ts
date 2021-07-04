@@ -5,20 +5,10 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Header = styled.div`
-  padding: 1rem;
-  border-right: 1px solid ${({ theme }) => theme.colors.borderColor};
-  border-left: 1px solid ${({ theme }) => theme.colors.borderColor};
-
-  h1 {
-    font-size: 1.25rem;
-    font-weight: 800;
-  }
-`;
-
 export const ContainerCreatorPosts = styled.div`
   padding: 0.5rem 1rem;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  border-top: 0;
 
   display: flex;
 

@@ -1,7 +1,7 @@
 import { Post } from "./Post";
 import { Container } from "./styles";
 
-export function MainContent() {
+export function Content() {
   return (
     <Container>
       <Post
