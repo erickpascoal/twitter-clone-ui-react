@@ -36,12 +36,12 @@ export const PostInfo = styled.div`
 
 export const ContainerAuthor = styled.div`
   width: 100%;
+  margin-bottom: 0.15rem;
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.15rem;
-
-  position: relative;
 `;
 
 export const ButtonActionEllipsis = styled(ButtonCircle)`
@@ -93,12 +93,14 @@ export const ContainerPostImage = styled.div`
   position: relative;
   border-radius: 1rem;
   border: solid 1px ${({ theme }) => theme.colors.borderColor};
+  width: 100%;
 
   overflow: hidden;
 
   img {
-    max-width: 33.6rem;
-    min-height: 18.5rem;
+    position: relative;
+    max-width: 100%;
+    /* min-height: 18.5rem; */
   }
 `;
 

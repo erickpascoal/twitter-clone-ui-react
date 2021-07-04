@@ -1,4 +1,4 @@
-import { ButtonMenu, Container, MenuItem } from "./styles";
+import { ButtonMenu, ButtonStyled, Container, MenuItem } from "./styles";
 
 import { ImTwitter as IconTwitter } from "react-icons/im";
 import { RiHome4Fill as IconHome } from "react-icons/ri";
@@ -9,7 +9,6 @@ import { BiEnvelope as IconEnvelope } from "react-icons/bi";
 import { RiFileListLine as IconList } from "react-icons/ri";
 import { FaRegUser as IconUser } from "react-icons/fa";
 import { IoEllipsisHorizontalCircle as IconEllipsis } from "react-icons/io5";
-import { Button } from "view/components/Button";
 import { ButtonUser } from "./ButtonUser";
 
 export function AsideLeft() {
@@ -88,9 +87,10 @@ export function AsideLeft() {
           </MenuItem>
         </ul>
 
-        <Button width="14.06rem" height="2.87rem" type="button">
-          Tweetar
-        </Button>
+        <ButtonStyled type="button">
+          <strong>Tweetar</strong>
+          <IconUser />
+        </ButtonStyled>
 
         <ButtonUser />
       </div>

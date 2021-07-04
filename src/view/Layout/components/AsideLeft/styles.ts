@@ -1,9 +1,11 @@
 import { transparentize } from "polished";
 import styled, { css } from "styled-components";
+import { Button } from "view/components/Button";
 
 export const Container = styled.div`
   max-width: 17.18rem;
   width: 100%;
+  min-width: 4.5rem;
   padding: 0.2rem 0.75rem;
   position: relative;
   max-height: 100vh;
@@ -18,6 +20,13 @@ export const Container = styled.div`
 
   ul {
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 1281px) {
+    max-width: 4.5rem;
+    .wrapper {
+      max-width: 4.5rem;
+    }
   }
 `;
 
@@ -94,6 +103,41 @@ export const ButtonMenu = styled.button`
 
     strong {
       color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
+
+  @media (max-width: 1281px) {
+    strong {
+      display: none;
+    }
+  }
+`;
+
+export const ButtonStyled = styled(Button)`
+  width: 14.06rem;
+  height: 2.87rem;
+
+  strong {
+    font-size: 0.935rem;
+    font-weight: 700;
+    /* todo: colocar em variaveis */
+    color: #fff;
+  }
+
+  svg {
+    display: none;
+    fill: #fff;
+  }
+
+  @media (max-width: 1281px) {
+    width: 2.87rem;
+
+    strong {
+      display: none;
+    }
+
+    svg {
+      display: flex;
     }
   }
 `;

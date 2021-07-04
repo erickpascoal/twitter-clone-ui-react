@@ -3,7 +3,7 @@ import { transparentize } from "polished";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 37.37rem;
 `;
 
 export const Header = styled.div`

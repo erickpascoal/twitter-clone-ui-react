@@ -61,5 +61,12 @@ export const ContainerUserInfo = styled.div`
       font-size: 0.93rem;
       color: ${({ theme }) => theme.colors.quaternary};
     }
+
+    @media (max-width: 1281px) {
+      strong,
+      p {
+        display: none;
+      }
+    }
   }
 `;

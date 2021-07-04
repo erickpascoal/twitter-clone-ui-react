@@ -9,6 +9,10 @@ export const Container = styled.div`
   position: fixed;
   top: 0rem;
   z-index: 1;
+
+  @media (max-width: 1095px) {
+    max-width: 18rem;
+  }
 `;
 
 interface ContainerProps {
