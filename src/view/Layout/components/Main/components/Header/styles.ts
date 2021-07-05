@@ -15,11 +15,6 @@ export const Container = styled.div`
   display: flex;
   gap: 0.5rem;
 
-  h1 {
-    font-size: 1.25rem;
-    font-weight: 800;
-  }
-
   .user-img {
     display: none;
 
@@ -27,6 +22,17 @@ export const Container = styled.div`
     height: 2rem;
     border-radius: 50%;
     margin-right: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.colors.secondary};
+    font-size: 2rem;
+    margin-left: auto;
   }
 
   @media (max-width: 500px) {

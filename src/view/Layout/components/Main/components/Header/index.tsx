@@ -1,5 +1,7 @@
 import { Container } from "./styles";
 
+import { WiStars as IconStars } from "react-icons/wi";
+
 export function Header() {
   return (
     <Container>
@@ -10,6 +12,7 @@ export function Header() {
       />
 
       <h1>Página Inicial</h1>
+      <IconStars />
     </Container>
   );
 }
