@@ -26,6 +26,10 @@ export const Container = styled.div`
     max-width: 4.5rem;
     padding: 0.2rem 2.7rem;
   }
+
+  @media (max-width: 502px) {
+    display: none;
+  }
 `;
 
 interface MenuItemProps {
@@ -56,7 +60,7 @@ export const MenuItem = styled.li<MenuItemProps>`
       display: flex;
     }
 
-    svg {
+    button svg {
       font-size: 1.8rem;
     }
   }
@@ -78,7 +82,7 @@ export const ButtonMenu = styled.button`
     align-items: center;
   }
 
-  svg {
+  > div svg {
     font-size: 1.5rem;
   }
 
@@ -115,6 +119,11 @@ export const ButtonMenu = styled.button`
 export const ButtonStyled = styled(Button)`
   width: 14.06rem;
   height: 2.87rem;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   strong {
     font-size: 0.935rem;
@@ -125,7 +134,9 @@ export const ButtonStyled = styled(Button)`
 
   svg {
     display: none;
+    /* todo: colocar em variaveis */
     fill: #fff;
+    font-size: 1.5rem;
   }
 
   @media (max-width: 1281px) {
@@ -135,8 +146,8 @@ export const ButtonStyled = styled(Button)`
       display: none;
     }
 
-    > svg {
-      display: flex;
+    svg {
+      display: block;
     }
   }
 `;

@@ -1,6 +1,7 @@
 import { AsideLeft } from "./components/AsideLeft";
 import { AsideRight } from "./components/AsideRight";
 import { Main } from "./components/Main";
+import { MobileMenu } from "./components/MobileMenu";
 import { Container } from "./styles";
 
 export function Layout() {
@@ -9,6 +10,7 @@ export function Layout() {
       <AsideLeft />
       <Main />
       <AsideRight />
+      <MobileMenu />
     </Container>
   );
 }

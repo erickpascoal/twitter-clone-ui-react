@@ -3,6 +3,10 @@ import { transparentize } from "polished";
 
 export const Container = styled.div`
   width: 100%;
+
+  @media (max-width: 502px) {
+    display: none;
+  }
 `;
 
 export const ContainerCreatorPosts = styled.div`

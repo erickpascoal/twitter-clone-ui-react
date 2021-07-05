@@ -25,6 +25,11 @@ export const Container = styled.div`
     border-radius: 50%;
     margin-right: 0.75rem;
   }
+
+  @media (max-width: 500px) {
+    border-left: 0;
+    border-right: 0;
+  }
 `;
 
 export const PostInfo = styled.div`

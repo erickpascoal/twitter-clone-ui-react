@@ -8,6 +8,7 @@ import { VscBookmark as IconBookMark } from "react-icons/vsc";
 import { BiEnvelope as IconEnvelope } from "react-icons/bi";
 import { RiFileListLine as IconList } from "react-icons/ri";
 import { FaRegUser as IconUser } from "react-icons/fa";
+import { GiFeather as IconFeather } from "react-icons/gi";
 import { IoEllipsisHorizontalCircle as IconEllipsis } from "react-icons/io5";
 import { ButtonUser } from "./ButtonUser";
 
@@ -88,7 +89,7 @@ export function AsideLeft() {
 
       <ButtonStyled type="button">
         <strong>Tweetar</strong>
-        <IconUser />
+        <IconFeather />
       </ButtonStyled>
 
       <ButtonUser />
