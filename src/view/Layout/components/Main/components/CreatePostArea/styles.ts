@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { transparentize } from "polished";
-import { Avatar } from "view/components/Avatar";
 
 export const Container = styled.div`
   width: 100%;

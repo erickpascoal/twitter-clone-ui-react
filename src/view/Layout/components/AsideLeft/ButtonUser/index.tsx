@@ -7,7 +7,6 @@ export function ButtonUser() {
   return (
     <Container>
       <ButtonStyled>
-        {/* todo:criar componente avatar */}
         <ContainerUserInfo>
           <Avatar
             urlImage="https://avatars.githubusercontent.com/u/61211253?v=4"

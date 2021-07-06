@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Avatar } from "view/components/Avatar";
 
 export const Container = styled.div`
   padding: 0.8rem 1rem;
@@ -36,8 +35,4 @@ export const Container = styled.div`
       display: block;
     }
   }
-`;
-
-export const AvatarStyled = styled(Avatar)`
-  display: none;
 `;
