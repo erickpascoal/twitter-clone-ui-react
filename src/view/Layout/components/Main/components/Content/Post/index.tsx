@@ -17,6 +17,7 @@ import { FaRegComment as IconComment } from "react-icons/fa";
 import { BsHeart as IconHeart } from "react-icons/bs";
 import { BsUpload as IconUpload } from "react-icons/bs";
 import { useTheme } from "styled-components";
+import { Avatar } from "view/components/Avatar";
 
 interface PostProps {
   text: string;
@@ -28,10 +29,9 @@ export function Post({ text, imageUrl }: PostProps) {
 
   return (
     <Container>
-      <img
-        className="user-img"
-        src="https://avatars.githubusercontent.com/u/61211253?v=4"
-        alt="Avatar"
+      <Avatar
+        urlImage="https://avatars.githubusercontent.com/u/61211253?v=4"
+        size="3rem"
       />
 
       <PostInfo>

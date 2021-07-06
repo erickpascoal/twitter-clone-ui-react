@@ -53,12 +53,6 @@ export const ContainerUserInfo = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  .avatar-img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-  }
-
   div {
     display: flex;
     flex-direction: column;

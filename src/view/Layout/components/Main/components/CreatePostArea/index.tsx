@@ -14,15 +14,15 @@ import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { VscSmiley } from "react-icons/vsc";
 import { ButtonCircle } from "view/components/ButtonCircle";
 import { Button } from "view/components/Button";
+import { Avatar } from "view/components/Avatar";
 
 export function CreatePostArea() {
   return (
     <Container>
       <ContainerCreatorPosts>
-        <img
-          className="avatar-img"
-          src="https://avatars.githubusercontent.com/u/61211253?v=4"
-          alt="Avatar"
+        <Avatar
+          urlImage="https://avatars.githubusercontent.com/u/61211253?v=4"
+          size="3rem"
         />
 
         <FormStyled>

@@ -1,3 +1,4 @@
+import { Avatar } from "view/components/Avatar";
 import { ButtonOutLineStyled, Container } from "./styles";
 
 interface UserFollow {
@@ -13,7 +14,7 @@ interface UserFollowCardProps {
 export function UserFollowCard({ userFollow }: UserFollowCardProps) {
   return (
     <Container>
-      <img className="user-img" src={userFollow.urlImg} alt="Avatar" />
+      <Avatar urlImage={userFollow.urlImg} size="3rem" />
 
       <div>
         <strong>{userFollow.name}</strong>

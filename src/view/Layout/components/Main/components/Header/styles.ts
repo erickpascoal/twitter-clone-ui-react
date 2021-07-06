@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Avatar } from "view/components/Avatar";
 
 export const Container = styled.div`
   padding: 0.8rem 1rem;
@@ -15,13 +16,8 @@ export const Container = styled.div`
   display: flex;
   gap: 0.5rem;
 
-  .user-img {
+  img {
     display: none;
-
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    margin-right: 0.75rem;
   }
 
   h1 {
@@ -36,8 +32,12 @@ export const Container = styled.div`
   }
 
   @media (max-width: 500px) {
-    .user-img {
+    img {
       display: block;
     }
   }
+`;
+
+export const AvatarStyled = styled(Avatar)`
+  display: none;
 `;

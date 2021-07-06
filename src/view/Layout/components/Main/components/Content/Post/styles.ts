@@ -19,13 +19,6 @@ export const Container = styled.div`
     `};
   }
 
-  .user-img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin-right: 0.75rem;
-  }
-
   @media (max-width: 500px) {
     border-left: 0;
     border-right: 0;
@@ -34,6 +27,7 @@ export const Container = styled.div`
 
 export const PostInfo = styled.div`
   width: 100%;
+  margin-left: 0.75rem;
 
   display: flex;
   flex-direction: column;

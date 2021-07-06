@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { transparentize } from "polished";
+import { Avatar } from "view/components/Avatar";
 
 export const Container = styled.div`
   width: 100%;
@@ -15,17 +16,11 @@ export const ContainerCreatorPosts = styled.div`
   border-top: 0;
 
   display: flex;
-
-  .avatar-img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin-right: 0.75rem;
-  }
 `;
 
 export const FormStyled = styled.form`
   width: 100%;
+  margin-left: 0.75rem;
 
   display: flex;
   flex-direction: column;
