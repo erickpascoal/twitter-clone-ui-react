@@ -5,12 +5,14 @@ import { Container } from "./styles";
 interface ButtonCircleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   extraText?: string;
   color?: string;
+  paintChildren?: boolean;
 }
 
 export function ButtonCircle({
   children,
   extraText,
   color,
+  paintChildren = true,
   ...rest
 }: ButtonCircleProps) {
   const theme = useTheme();
@@ -20,7 +22,7 @@ export function ButtonCircle({
   }
 
   return (
-    <Container color={color} {...rest}>
+    <Container color={color} paintChildren={paintChildren} {...rest}>
       <div className="circle">{children}</div>
       {extraText && <p>{extraText}</p>}
     </Container>

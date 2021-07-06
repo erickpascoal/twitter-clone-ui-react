@@ -20,8 +20,7 @@ interface ContainerProps {
 }
 
 export const ContainerInput = styled.div<ContainerProps>`
-  /* todo: colocar em variaveis */
-  background-color: #202327;
+  background-color: ${({ theme }) => theme.colors.backgroudInputSearch};
   border-radius: 99999px;
   padding: 0 1rem;
   display: flex;

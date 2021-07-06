@@ -128,14 +128,12 @@ export const ButtonStyled = styled(Button)`
   strong {
     font-size: 0.935rem;
     font-weight: 700;
-    /* todo: colocar em variaveis */
-    color: #fff;
+    color: ${({ theme }) => theme.colors.fontColor2};
   }
 
   svg {
     display: none;
-    /* todo: colocar em variaveis */
-    fill: #fff;
+    fill: ${({ theme }) => theme.colors.fontColor2};
     font-size: 1.5rem;
   }
 

@@ -46,8 +46,7 @@ export const ButtonCreatePost = styled.button`
   height: 4rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.secondary};
-  /* todo: colocar em variaveis */
-  color: #fff;
+  color: ${({ theme }) => theme.colors.fontColor2};
 
   display: flex;
   justify-content: center;

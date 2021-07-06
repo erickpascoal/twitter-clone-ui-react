@@ -21,7 +21,7 @@ export function FollowTopicCard({ topicFollow }: FollowTopicCardProps) {
 
       <ButtonOutLineStyled color="secondary">Seguir</ButtonOutLineStyled>
 
-      <ButtonCircleStyled>
+      <ButtonCircleStyled paintChildren={false}>
         <IconTimes />
       </ButtonCircleStyled>
     </Container>

@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 interface ContainerProps {
   color: string;
+  paintChildren: boolean;
 }
 
 export const Container = styled.button<ContainerProps>`
@@ -36,12 +37,12 @@ export const Container = styled.button<ContainerProps>`
 
       svg {
         transition: all 0.3s;
-        fill: ${({ color }) => color};
+        fill: ${({ paintChildren, color }) => paintChildren && color};
       }
     }
 
     p {
-      color: ${({ color }) => color};
+      color: ${({ paintChildren, color }) => paintChildren && color};
     }
   }
 `;

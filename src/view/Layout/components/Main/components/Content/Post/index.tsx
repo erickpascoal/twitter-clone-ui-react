@@ -9,7 +9,7 @@ import {
   AuthorName,
   ActionsPost,
   ButtonActionPost,
-  ButtonActionEllipsis,
+  ButtonCircleStyled,
 } from "./styles";
 import { IoEllipsisHorizontalSharp as IconEllipsis } from "react-icons/io5";
 import { AiOutlineRetweet as IconRetweet } from "react-icons/ai";
@@ -42,9 +42,9 @@ export function Post({ text, imageUrl }: PostProps) {
             <PostTime>29 min</PostTime>
           </div>
 
-          <ButtonActionEllipsis>
+          <ButtonCircleStyled>
             <IconEllipsis />
-          </ButtonActionEllipsis>
+          </ButtonCircleStyled>
         </ContainerAuthor>
 
         <PostContent>

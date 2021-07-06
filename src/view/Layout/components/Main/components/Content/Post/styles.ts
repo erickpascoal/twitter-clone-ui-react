@@ -43,7 +43,7 @@ export const ContainerAuthor = styled.div`
   align-items: flex-start;
 `;
 
-export const ButtonActionEllipsis = styled(ButtonCircle)`
+export const ButtonCircleStyled = styled(ButtonCircle)`
   position: absolute;
   top: -0.5rem;
   right: 0;

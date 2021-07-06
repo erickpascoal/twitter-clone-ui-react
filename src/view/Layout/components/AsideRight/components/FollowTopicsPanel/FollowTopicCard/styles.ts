@@ -32,11 +32,4 @@ export const ButtonCircleStyled = styled(ButtonCircle)`
   svg {
     fill: ${({ theme }) => theme.colors.quaternary};
   }
-
-  /* todo: remover esse important */
-  &:hover {
-    svg {
-      fill: ${({ theme }) => theme.colors.quaternary} !important;
-    }
-  }
 `;

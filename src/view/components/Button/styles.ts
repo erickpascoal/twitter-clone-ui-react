@@ -17,7 +17,7 @@ export const Container = styled.button<ContainerProps>`
 
   font-size: 0.93rem;
   font-weight: 700;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.fontColor2};
 
   transition: background-color 0.3s;
 
