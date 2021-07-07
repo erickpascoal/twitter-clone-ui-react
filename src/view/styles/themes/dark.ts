@@ -12,5 +12,6 @@ export const darkTheme = {
     sharingColor: "#17bf63",
     likeColor: "#e0245e",
     backgroudInputSearch: "#202327",
+    logo: "#d9d9d9",
   },
 };

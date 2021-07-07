@@ -62,6 +62,7 @@ export const MenuItem = styled.li<MenuItemProps>`
 
     button svg {
       font-size: 1.8rem;
+      fill: ${({ theme }) => theme.colors.logo};
     }
   }
 `;
