@@ -1,16 +1,26 @@
-import { ReactNode } from "react";
+import { THEME_KEY } from "constants/localStorage";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "styles/global";
 import { darkTheme } from "styles/themes/dark";
+import { lightTheme } from "styles/themes/light";
+import { usePersistedState } from "utils/usePersistedState";
+import { StyleContext } from "./StyleContext";
+import { StyleProviderProps, ThemeName } from "./types";
 
-interface StyleProps {
-  children: ReactNode;
-}
-export function StyleProvider({ children }: StyleProps) {
+export function StyleProvider({ children }: StyleProviderProps) {
+  const [theme, setTheme] = usePersistedState<ThemeName>(THEME_KEY, "dark");
+
+  const themes = {
+    dark: darkTheme,
+    light: lightTheme,
+  };
+
   return (
-    <ThemeProvider theme={darkTheme}>
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    <StyleContext.Provider value={{ setTheme }}>
+      <ThemeProvider theme={themes[theme]}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </StyleContext.Provider>
   );
 }
