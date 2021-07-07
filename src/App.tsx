@@ -1,17 +1,14 @@
-import { ThemeProvider } from "styled-components";
 import { Layout } from "Layout";
-import { GlobalStyle } from "styles/global";
-import { darkTheme } from "styles/themes/dark";
 import { Home } from "pages/Home";
+import { AppProvider } from "contexts";
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <AppProvider>
       <Layout>
         <Home />
       </Layout>
-      <GlobalStyle />
-    </ThemeProvider>
+    </AppProvider>
   );
 }
 
