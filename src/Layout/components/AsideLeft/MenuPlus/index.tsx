@@ -1,5 +1,14 @@
 import { ButtonStyled, Container, ListMenu, Separetor } from "./styles";
-import { RiHome4Fill as IconHome } from "react-icons/ri";
+import { GrChat as IconChat } from "react-icons/gr";
+import { BsLightning as IconLightning } from "react-icons/bs";
+import { IoNewspaperOutline as IconPaper } from "react-icons/io5";
+import { BsBoxArrowInUpRight as IconBoxArrowUpRight } from "react-icons/bs";
+import { FiBarChart2 as IconChart } from "react-icons/fi";
+import { BsGear as IconGear } from "react-icons/bs";
+import { BsQuestionCircle as IconQuestion } from "react-icons/bs";
+import { MdBrush as IconBrush } from "react-icons/md";
+
+import { IoIosBody as IconPerson } from "react-icons/io";
 import { memo } from "react";
 
 interface MenuPlusProps {
@@ -16,31 +25,31 @@ function MenuPlus({ isMenuPlusOpen }: MenuPlusProps) {
       <ListMenu>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconChat />
             <span>Tópicos</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconLightning />
             <span>Moments</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconPaper />
             <span>Boletins informativos</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconBoxArrowUpRight />
             <span>Anúncios do Twitter</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconChart />
             <span>Estatísticas</span>
           </ButtonStyled>
         </li>
@@ -49,25 +58,25 @@ function MenuPlus({ isMenuPlusOpen }: MenuPlusProps) {
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconGear />
             <span>Configurações e privacidade</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconQuestion />
             <span>Central de Ajuda</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconBrush />
             <span>Exibição</span>
           </ButtonStyled>
         </li>
         <li>
           <ButtonStyled>
-            <IconHome />
+            <IconPerson />
             <span>Teclas de atalho</span>
           </ButtonStyled>
         </li>

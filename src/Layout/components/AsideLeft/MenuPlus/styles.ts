@@ -38,8 +38,8 @@ export const ButtonStyled = styled.button`
     background-color: ${({ theme }) => lighten(0.01, theme.colors.tertiary)};
   }
 
-  svg {
-    fill: #fff;
+  > svg {
+    fill: ${({ theme }) => theme.colors.borderColor}!important;
     width: 1rem;
     height: 1rem;
     margin-right: 0.75rem;
@@ -47,6 +47,7 @@ export const ButtonStyled = styled.button`
 
   > span {
     font-size: 0.935rem;
+    fill: ${({ theme }) => theme.colors.fontColor};
   }
 `;
 
