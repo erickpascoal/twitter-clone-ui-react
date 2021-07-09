@@ -7,7 +7,8 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   min-width: 4.5rem;
-  padding: 0.2rem 0.75rem;
+  padding: 0.2rem 0rem;
+  padding-right: 0.75rem;
   position: relative;
   max-height: 100vh;
 
@@ -18,7 +19,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ul {
+  z-index: 3;
+
+  > ul {
     margin-bottom: 1rem;
   }
 
@@ -75,7 +78,9 @@ export const ButtonMenu = styled.button`
 
   transition: all 0.3s;
 
-  div {
+  position: relative;
+
+  > div {
     padding: 0 0.75rem;
 
     display: flex;
@@ -101,7 +106,8 @@ export const ButtonMenu = styled.button`
         background-color: ${transparentize(0.9, theme.colors.secondary)};
       `}
 
-    svg {
+    /* todo: acertar insides de css */
+    > svg {
       fill: ${({ theme }) => theme.colors.secondary};
     }
 
@@ -132,7 +138,7 @@ export const ButtonStyled = styled(Button)`
     color: ${({ theme }) => theme.colors.fontColor2};
   }
 
-  svg {
+  > svg {
     display: none;
     fill: ${({ theme }) => theme.colors.fontColor2};
     font-size: 1.5rem;

@@ -11,8 +11,29 @@ import { FaRegUser as IconUser } from "react-icons/fa";
 import { GiFeather as IconFeather } from "react-icons/gi";
 import { IoEllipsisHorizontalCircle as IconEllipsis } from "react-icons/io5";
 import { ButtonUser } from "./ButtonUser";
+import MenuPlus from "./MenuPlus";
+import { useEffect, useRef, useState } from "react";
+import { useCallback } from "react";
 
 export function AsideLeft() {
+  const [isMenuPlusOpen, setIsMenuOpenPlus] = useState(false);
+  const menuPlusRef = useRef<any>(null);
+
+  const listenerClick = useCallback((event: any) => {
+    event.stopPropagation();
+
+    if (menuPlusRef?.current && !menuPlusRef.current.contains(event.target)) {
+      setIsMenuOpenPlus(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("click", listenerClick);
+
+    // todo: remover evento
+    // return document.removeEventListener("click", listenerClick);
+  }, [listenerClick]);
+
   return (
     <Container>
       <ul>
@@ -78,11 +99,13 @@ export function AsideLeft() {
           </ButtonMenu>
         </MenuItem>
         <MenuItem>
-          <ButtonMenu>
+          <ButtonMenu ref={menuPlusRef} onClick={() => setIsMenuOpenPlus(true)}>
             <div>
               <IconEllipsis />
               <strong>Mais</strong>
             </div>
+
+            <MenuPlus isMenuPlusOpen={isMenuPlusOpen} />
           </ButtonMenu>
         </MenuItem>
       </ul>
