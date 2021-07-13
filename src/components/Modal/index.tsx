@@ -1,16 +1,14 @@
-import { Button } from "components/Button";
+import { useModalContext } from "contexts/modal/ModalContext";
+import { ModalProps } from "contexts/modal/types";
 import { useRef } from "react";
-import { ContainerModal, FutureContent, ModalStyled } from "./styles";
+import { ContainerModal, ModalStyled } from "./styles";
 
-interface ModalProps {
-  isModalOpen: boolean;
-  closeModal: () => void;
-}
-
-export function Modal({ isModalOpen, closeModal }: ModalProps) {
+export function Modal({ isOpen, component, title }: ModalProps) {
   const overlayRef = useRef(null);
 
-  if (!isModalOpen) {
+  const modalContext = useModalContext();
+
+  if (!isOpen) {
     return null;
   }
 
@@ -21,27 +19,13 @@ export function Modal({ isModalOpen, closeModal }: ModalProps) {
       onClick={(event) => {
         event.stopPropagation();
         if (event.target === overlayRef.current) {
-          closeModal();
+          modalContext.closeModal();
         }
       }}
     >
       <ModalStyled>
-        <header>Personalizar sua exibição</header>
-
-        <div className="content">
-          <FutureContent>
-            <p>
-              Gerencie o tamanho da fonte, a cor e o plano de fundo. Essas
-              configurações afetam todas as contas do Twitter neste navegador.
-            </p>
-
-            <div>blab blab bla</div>
-
-            <footer>
-              <Button>Concluído</Button>
-            </footer>
-          </FutureContent>
-        </div>
+        <header>{title}</header>
+        <div className="content">{component}</div>
       </ModalStyled>
     </ContainerModal>
   );

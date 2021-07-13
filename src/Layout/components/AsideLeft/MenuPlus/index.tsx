@@ -10,6 +10,8 @@ import { MdBrush as IconBrush } from "react-icons/md";
 
 import { IoIosBody as IconPerson } from "react-icons/io";
 import { memo } from "react";
+import { useModalContext } from "contexts/modal/ModalContext";
+import { ConfigureTheme } from "components/ConfigureTheme";
 
 interface MenuPlusProps {
   isMenuPlusOpen: boolean;
@@ -17,11 +19,19 @@ interface MenuPlusProps {
 }
 
 function MenuPlus({ isMenuPlusOpen, onCloseMenuPlus }: MenuPlusProps) {
+  const modalContext = useModalContext();
+
   if (!isMenuPlusOpen) {
     return null;
   }
 
-  function handleClickExhibition() {
+  function openConfigureTheme() {
+    modalContext.addModal({
+      isOpen: true,
+      title: "Personalizar sua exibição",
+      component: <ConfigureTheme />,
+    });
+
     setTimeout(() => {
       onCloseMenuPlus();
     }, 0);
@@ -75,7 +85,7 @@ function MenuPlus({ isMenuPlusOpen, onCloseMenuPlus }: MenuPlusProps) {
           </ButtonStyled>
         </li>
         <li>
-          <ButtonStyled onClick={handleClickExhibition}>
+          <ButtonStyled onClick={openConfigureTheme}>
             <IconBrush />
             <span>Exibição</span>
           </ButtonStyled>

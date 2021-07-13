@@ -16,7 +16,11 @@ export function ModalProvider({ children }: ModalProviderProps) {
 
   return (
     <ModalContext.Provider value={{ addModal, closeModal }}>
-      <Modal isModalOpen={modal.isOpen} closeModal={closeModal} />
+      <Modal
+        isOpen={modal.isOpen}
+        title={modal.title}
+        component={modal.component}
+      />
       {children}
     </ModalContext.Provider>
   );
