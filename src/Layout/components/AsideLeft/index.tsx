@@ -34,6 +34,10 @@ export function AsideLeft() {
     // return document.removeEventListener("click", listenerClick);
   }, [listenerClick]);
 
+  const closeMenuPlus = useCallback(() => {
+    setIsMenuOpenPlus(false);
+  }, []);
+
   return (
     <Container>
       <ul>
@@ -105,7 +109,10 @@ export function AsideLeft() {
               <strong>Mais</strong>
             </div>
 
-            <MenuPlus isMenuPlusOpen={isMenuPlusOpen} />
+            <MenuPlus
+              isMenuPlusOpen={isMenuPlusOpen}
+              onCloseMenuPlus={closeMenuPlus}
+            />
           </ButtonMenu>
         </MenuItem>
       </ul>

@@ -13,13 +13,19 @@ import { memo } from "react";
 
 interface MenuPlusProps {
   isMenuPlusOpen: boolean;
+  onCloseMenuPlus: () => void;
 }
 
-function MenuPlus({ isMenuPlusOpen }: MenuPlusProps) {
+function MenuPlus({ isMenuPlusOpen, onCloseMenuPlus }: MenuPlusProps) {
   if (!isMenuPlusOpen) {
     return null;
   }
 
+  function handleClickExhibition() {
+    setTimeout(() => {
+      onCloseMenuPlus();
+    }, 0);
+  }
   return (
     <Container>
       <ListMenu>
@@ -69,7 +75,7 @@ function MenuPlus({ isMenuPlusOpen }: MenuPlusProps) {
           </ButtonStyled>
         </li>
         <li>
-          <ButtonStyled>
+          <ButtonStyled onClick={handleClickExhibition}>
             <IconBrush />
             <span>Exibição</span>
           </ButtonStyled>

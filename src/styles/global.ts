@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 		outline: none;
 		box-sizing: border-box;
 		color: ${({ theme }) => theme.colors.fontColor};
+		font: 16px  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	}
 
 	html {
@@ -35,6 +36,5 @@ export const GlobalStyle = createGlobalStyle`
 
 
 	* {
-		font: 16px  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	}
 `;
