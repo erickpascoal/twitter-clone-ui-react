@@ -21,7 +21,7 @@ export const ModalStyled = styled.div`
   border-radius: 1rem;
   z-index: 200;
 
-  header {
+  > header {
     color: ${({ theme }) => theme.colors.fontColor};
     font-weight: 800;
     font-size: 1.43rem;

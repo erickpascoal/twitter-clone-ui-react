@@ -1,9 +1,17 @@
 import { Button } from "components/Button";
 import { useModalContext } from "contexts/modal/ModalContext";
+import { FontSizeEdit } from "./components/FontSizeEdit";
+import { PostExample } from "./components/PostExample";
+import { SecondaryColorEdit } from "./components/SecondaryColorEdit";
+import { ThemeEdit } from "./components/ThemeEdit";
 import { Container } from "./styles";
 
 export function ConfigureTheme() {
   const modalContext = useModalContext();
+
+  function closeModal() {
+    modalContext.closeModal();
+  }
 
   return (
     <Container>
@@ -12,10 +20,16 @@ export function ConfigureTheme() {
         configurações afetam todas as contas do Twitter neste navegador.
       </p>
 
-      <div>blab blab bla</div>
+      <PostExample />
+
+      <FontSizeEdit />
+
+      <SecondaryColorEdit />
+
+      <ThemeEdit />
 
       <footer>
-        <Button onClick={() => modalContext.closeModal()}>Concluído</Button>
+        <Button onClick={closeModal}>Concluído</Button>
       </footer>
     </Container>
   );
