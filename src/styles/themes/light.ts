@@ -1,4 +1,5 @@
 export const lightTheme = {
+  name: 'light',
   colors: {
     primary: "#ffffff",
     secondary: "#1da1f2",

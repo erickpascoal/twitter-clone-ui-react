@@ -16,7 +16,7 @@ export function StyleProvider({ children }: StyleProviderProps) {
   };
 
   return (
-    <StyleContext.Provider value={{ setTheme }}>
+    <StyleContext.Provider value={{ theme, setTheme }}>
       <ThemeProvider theme={themes[theme]}>
         <GlobalStyle />
         {children}
