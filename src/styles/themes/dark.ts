@@ -1,10 +1,10 @@
 export const darkTheme = {
-  name: 'dark',
+  name: "dark",
   colors: {
     primary: "#15202b",
     secondary: "#1da1f2",
-    tertiary: "#15181c",
-    quaternary: "#6e767d",
+    tertiary: "#192734",
+    quaternary: "#8899a6",
 
     fontColor: "#d9d9d9",
     fontColor2: "#fff",

@@ -24,7 +24,6 @@ export function ThemeEdit() {
         <span className="checkmark"></span>
         <p>Padrão</p>
       </ThemeOption>
-
       <ThemeOption
         variant="dark"
         onClick={() => handleSetTheme("dark")}
@@ -34,7 +33,6 @@ export function ThemeEdit() {
         <span className="checkmark"></span>
         <p>Um pouco escuro</p>
       </ThemeOption>
-
       <ThemeOption
         variant="veryDark"
         onClick={() => handleSetTheme("veryDark")}

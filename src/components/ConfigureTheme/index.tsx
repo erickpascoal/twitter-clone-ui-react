@@ -1,5 +1,6 @@
 import { Button } from "components/Button";
 import { useModalContext } from "contexts/modal/ModalContext";
+import { BoxConfig } from "./components/BoxConfig";
 import { FontSizeEdit } from "./components/FontSizeEdit";
 import { PostExample } from "./components/PostExample";
 import { SecondaryColorEdit } from "./components/SecondaryColorEdit";
@@ -22,11 +23,17 @@ export function ConfigureTheme() {
 
       <PostExample />
 
-      <FontSizeEdit />
+      <BoxConfig name="Tamanho da fonte">
+        <FontSizeEdit />
+      </BoxConfig>
 
-      <SecondaryColorEdit />
+      <BoxConfig name="Cor">
+        <SecondaryColorEdit />
+      </BoxConfig>
 
-      <ThemeEdit />
+      <BoxConfig name="Plano de fundo">
+        <ThemeEdit />
+      </BoxConfig>
 
       <footer>
         <Button onClick={closeModal}>Concluído</Button>

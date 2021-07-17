@@ -1,11 +1,6 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.tertiary};
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +8,7 @@ export const Container = styled.div`
 `;
 
 interface ThemeOptionProps {
-  variant: 'default' | 'dark' | 'veryDark';
+  variant: "default" | "dark" | "veryDark";
   isSelected: boolean;
 }
 
@@ -32,7 +27,7 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
   gap: 1rem;
 
   &:hover .checkmark::before {
-    content: '';
+    content: "";
     background-color: ${({ theme }) => theme.colors.borderColor};
     position: absolute;
     width: 40px;
@@ -63,10 +58,10 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
   input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #2196f3;
     border: 0;
   }
 
@@ -91,31 +86,32 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
     transform: rotate(35deg);
   }
 
-   p {
+  p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 6rem; 
+    width: 6rem;
     font-weight: 600;
     color: #fff;
   }
 
   ${({ variant }) => themeOptionVariants[variant]};
 
-  ${({theme, isSelected}) => isSelected && css`
-    border: solid 2px ${theme.colors.secondary}
-  `}
-
+  ${({ theme, isSelected }) =>
+    isSelected &&
+    css`
+      border: solid 2px ${theme.colors.secondary};
+    `}
 `;
 
 const themeOptionVariants = {
   default: css`
     background-color: #ffffff;
-    
+
     .checkmark {
-      border: solid 2px #b9cad3
-    };
-    
+      border: solid 2px #b9cad3;
+    }
+
     p {
       color: #0f1419;
     }
@@ -124,17 +120,14 @@ const themeOptionVariants = {
     background-color: #15202b;
 
     .checkmark {
-      border: solid 2px #6b7d8c
-    };
+      border: solid 2px #6b7d8c;
+    }
   `,
   veryDark: css`
     background-color: #000000;
 
     .checkmark {
-      border: solid 2px #3d4145
-    };
-  `
-}
-
-
-
+      border: solid 2px #3d4145;
+    }
+  `,
+};
