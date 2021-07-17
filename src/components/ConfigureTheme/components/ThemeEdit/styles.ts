@@ -13,7 +13,8 @@ export const Container = styled.div`
 `;
 
 interface ThemeOptionProps {
-  variant: 'default' | 'dark' | 'veryDark'
+  variant: 'default' | 'dark' | 'veryDark';
+  isSelected: boolean;
 }
 
 export const ThemeOption = styled.label<ThemeOptionProps>`
@@ -29,7 +30,6 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
 
   &:hover .checkmark::before {
     content: '';
@@ -54,8 +54,8 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
   }
 
   .checkmark {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
     background-color: transparent;
     border-radius: 50%;
     border: solid 2px ${({ theme }) => theme.colors.borderColor};
@@ -97,9 +97,14 @@ export const ThemeOption = styled.label<ThemeOptionProps>`
     text-overflow: ellipsis;
     width: 6rem; 
     font-weight: 600;
+    color: #fff;
   }
 
   ${({ variant }) => themeOptionVariants[variant]};
+
+  ${({theme, isSelected}) => isSelected && css`
+    border: solid 2px ${theme.colors.secondary}
+  `}
 
 `;
 
@@ -121,7 +126,6 @@ const themeOptionVariants = {
     .checkmark {
       border: solid 2px #6b7d8c
     };
-    
   `,
   veryDark: css`
     background-color: #000000;
@@ -131,4 +135,6 @@ const themeOptionVariants = {
     };
   `
 }
+
+
 

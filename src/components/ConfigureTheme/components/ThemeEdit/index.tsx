@@ -6,27 +6,37 @@ import { Container, ThemeOption } from "./styles";
 export function ThemeEdit() {
   const styleContext = useStyleContext();
 
-  const handleSetTheme = useCallback((themeName: ThemeName) => {
-    styleContext.setTheme(themeName)
-  }, [styleContext])
-
+  const handleSetTheme = useCallback(
+    (themeName: ThemeName) => {
+      styleContext.setTheme(themeName);
+    },
+    [styleContext]
+  );
 
   return (
     <Container>
-      <ThemeOption variant="default" onClick={() => handleSetTheme('light')}>
-        <input type="checkbox" checked={styleContext.theme === 'light'} />
+      <ThemeOption
+        variant="default"
+        onClick={() => handleSetTheme("light")}
+        isSelected={styleContext.theme === "light"}
+      >
+        <input type="checkbox" checked={styleContext.theme === "light"} />
         <span className="checkmark"></span>
         <p>Padrão</p>
       </ThemeOption>
 
-      <ThemeOption variant="dark">
+      <ThemeOption variant="dark" isSelected={false}>
         <input type="checkbox" />
         <span className="checkmark"></span>
         <p>Um pouco escuro</p>
       </ThemeOption>
 
-      <ThemeOption variant="veryDark" onClick={() => handleSetTheme('dark')}>
-        <input type="checkbox" checked={styleContext.theme === 'dark'} />
+      <ThemeOption
+        variant="veryDark"
+        onClick={() => handleSetTheme("dark")}
+        isSelected={styleContext.theme === "dark"}
+      >
+        <input type="checkbox" checked={styleContext.theme === "dark"} />
         <span className="checkmark"></span>
         <p>Superescuro</p>
       </ThemeOption>

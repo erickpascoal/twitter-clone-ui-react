@@ -69,5 +69,6 @@ export const AvatarTwitter = styled.section`
 
   svg {
     font-size: 1.5rem;
+    fill: #fff;
   }
 `;
