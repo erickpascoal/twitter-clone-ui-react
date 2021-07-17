@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type ThemeName = "dark" | "light";
+export type ThemeName =  "light" | "dark" | "veryDark" ;
 
 export interface StyleContextProps {
   theme: ThemeName;

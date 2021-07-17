@@ -25,18 +25,22 @@ export function ThemeEdit() {
         <p>Padrão</p>
       </ThemeOption>
 
-      <ThemeOption variant="dark" isSelected={false}>
-        <input type="checkbox" />
+      <ThemeOption
+        variant="dark"
+        onClick={() => handleSetTheme("dark")}
+        isSelected={styleContext.theme === "dark"}
+      >
+        <input type="checkbox" checked={styleContext.theme === "dark"} />
         <span className="checkmark"></span>
         <p>Um pouco escuro</p>
       </ThemeOption>
 
       <ThemeOption
         variant="veryDark"
-        onClick={() => handleSetTheme("dark")}
-        isSelected={styleContext.theme === "dark"}
+        onClick={() => handleSetTheme("veryDark")}
+        isSelected={styleContext.theme === "veryDark"}
       >
-        <input type="checkbox" checked={styleContext.theme === "dark"} />
+        <input type="checkbox" checked={styleContext.theme === "veryDark"} />
         <span className="checkmark"></span>
         <p>Superescuro</p>
       </ThemeOption>

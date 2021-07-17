@@ -3,16 +3,18 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "styles/global";
 import { darkTheme } from "styles/themes/dark";
 import { lightTheme } from "styles/themes/light";
+import { veryDarkTheme } from "styles/themes/veryDark";
 import { usePersistedState } from "utils/usePersistedState";
 import { StyleContext } from "./StyleContext";
 import { StyleProviderProps, ThemeName } from "./types";
 
 export function StyleProvider({ children }: StyleProviderProps) {
-  const [theme, setTheme] = usePersistedState<ThemeName>(THEME_KEY, "dark");
+  const [theme, setTheme] = usePersistedState<ThemeName>(THEME_KEY, "veryDark");
 
   const themes = {
-    dark: darkTheme,
     light: lightTheme,
+    dark: darkTheme,
+    veryDark: veryDarkTheme,
   };
 
   return (

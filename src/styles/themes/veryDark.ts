@@ -1,7 +1,7 @@
-export const darkTheme = {
-  name: 'dark',
+export const veryDarkTheme = {
+  name: 'veryDark',
   colors: {
-    primary: "#15202b",
+    primary: "#000000",
     secondary: "#1da1f2",
     tertiary: "#15181c",
     quaternary: "#6e767d",
